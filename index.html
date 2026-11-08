@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Friendship Journey</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <main class="card">
+
+        <!-- Welcome Page -->
+        <section class="page active" id="page1">
+            <div class="emoji">🌷</div>
+
+            <h1>A Little Friendship Journey</h1>
+
+            <p>
+                Hey! I made a little something for you.
+                There are a few fun questions inside.
+                Ready to begin?
+            </p>
+
+            <button onclick="nextPage(2)">
+                Let's Start ✨
+            </button>
+        </section>
+
+        <!-- Question 1 -->
+        <section class="page" id="page2">
+            <div class="progress">Question 1 of 3</div>
+
+            <div class="emoji">☀️</div>
+
+            <h1>How was your day?</h1>
+
+            <p>Choose whichever feels right.</p>
+
+            <div class="options">
+                <button onclick="saveAnswer('day', 'Awesome!')">
+                    Awesome! 😄
+                </button>
+
+                <button onclick="saveAnswer('day', 'Pretty good')">
+                    Pretty good 😊
+                </button>
+
+                <button onclick="saveAnswer('day', 'Just okay')">
+                    Just okay 🙂
+                </button>
+            </div>
+        </section>
+
+        <!-- Question 2 -->
+        <section class="page" id="page3">
+            <div class="progress">Question 2 of 3</div>
+
+            <div class="emoji">🎵</div>
+
+            <h1>What's your favorite song?</h1>
+
+            <p>Which song are you listening to these days?</p>
+
+            <input
+                type="text"
+                id="song"
+                placeholder="Your favorite song..."
+            >
+
+            <button onclick="saveText('song', 4)">
+                Next →
+            </button>
+        </section>
+
+        <!-- Question 3 -->
+        <section class="page" id="page4">
+            <div class="progress">Question 3 of 3</div>
+
+            <div class="emoji">🌈</div>
+
+            <h1>What makes you happy?</h1>
+
+            <p>It can be anything, big or small.</p>
+
+            <textarea
+                id="happy"
+                placeholder="Tell me something that makes you happy..."
+            ></textarea>
+
+            <button onclick="saveText('happy', 5)">
+                Finish →
+            </button>
+        </section>
+
+        <!-- Final Page -->
+        <section class="page" id="page5">
+            <div class="emoji">💌</div>
+
+            <h1>Thank You!</h1>
+
+            <p>
+                Thanks for answering my little questions.
+                I hope this small journey made you smile.
+            </p>
+
+            <button onclick="openLetter()">
+    Letter for You 💌
+</button>
+
+</section>
+
+<!-- LETTER PAGE -->
+<section class="page" id="page6">
+
+    <div class="emoji">💌</div>
+
+    <h1>Letter for You</h1>
+
+    <div class="letter-content">
+Hey Dost,
+
+TUMHE MAI DIL KI BAAT KEH RAHA HU
+TUM PAGAL KEH KA MAJAK MAI MAT LENA 
+KYU KI MAI TUM SA SHAYAD YE PEHLI AUR
+AAKHRI BAAR YE BAAT HIMMAT JUTAKAR KAHUNGA
+KI MUJHE TUMSE BAINTAHAAN MAHABAT HAI TUM 
+SUNKA SHAYED SOCH MAI DOOB JAAOGI,LEKIN TUM
+JAWAB TURANT MAT DENA CHAHE TUMHARA JAWAB HAAN 
+HO YA NA HO KYU KI KAHI TUMHARA JAWAB HA HUA 
+TOH MUJHE SAPNA LAGEGA AUR USS CHIZ KO APNANE 
+MAI WAQT OR KAHI TUMHARA JAWAB NA HUA TOH MUJHE 
+DAR RAHEGA KI ABB SHAYED TUMSE KABHI MULAQAT 
+NHI HOGI LEKIN MAI KEH DU KI TUMHARA JAWAB NA HO 
+TOH BHI MUJHE KOI GILLA NHI TUM VAISE HI REHENA 
+JAISI TUM HO MAI BHI VAISA HI RAHUNGA JAISA MAI 
+HOON YE WAADA HAI MERA KABHI TABHI TUMHARRE SAAMNE
+NAHI AAYEGI TUMHARA AANA HUA NASIB MAI TOH THIK VARNA 
+NASIB MAI JO HAI WAHI AAYEGI MAI TOH BUS DIL KI 
+BAATEIN ISLIYA KEH RAHA HU TUM BHI TOH SOCH RAHI 
+JO MAI SOCH RAHA HU TOH BUS TUMHARA JAWAB JO BHI HO
+WAQT LENA AUR SAMBHAL LENA.
+
+With love,
+Your .... ❤️
+    </div>
+
+    <div class="letter-options">
+
+    <h3>Did you like ? 💗</h3>
+
+    <button onclick="letterResponse('Yes')">
+        YES 💖
+    </button>
+
+    <button onclick="letterResponse('No')">
+        NO 🙂
+    </button>
+
+</div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
